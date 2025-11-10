@@ -8,7 +8,7 @@
 - [conda](https://www.anaconda.com/docs/getting-started/miniconda/install) or [uv](https://pypi.org/project/uv/).
 - [Ollama](https://www.ollama.com/download/linux) or a [OpenAI key](https://platform.openai.com/api-keys).
 
-```
+```bash
 # set env vars and load
 mv template.env .env
 source .env
@@ -37,6 +37,17 @@ jupyter notebook
 # deactivate env
 conda deactivate
 deactivate
+```
+
+*Windows installation:*
+
+```bash
+# using powershell
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+$env:Path = "C:\Users\Duoc\.local\bin;$env:Path"
+uv venv --python 3.12
+.\.venv\Scripts\activate.ps1
+uv pip install -r requirements.txt
 ```
 
 *Ollama models used:*
